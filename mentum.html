@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>mentum</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+    <div id="body">
+        <div class="header">
+            <div class="ribbon">
+                <div class="logo"></div>
+            </div>
+            <div class="logo-word">
+                <div class="word1"><span>MENTUM</span></div>
+                <div class="word2"><span>THEME</span></div>
+            </div>
+            <ul class="items">
+                <li>Home</li>
+                <li>Portfolio</li>
+                <li>Services</li>
+                <li>About Us</li>
+                <li>Price</li>
+                <li>Contact Us</li>
+            </ul>
+            <div class="search"></div>
+        </div>
+        <div class="s"></div>
+        <div class="secondpart">
+            
+        </div>
+        <div class="interval">
+            <ul class="pictures" style="left:-841px">
+                <li  alt="3"><img src="./image/3.png"></li>
+                <li  alt="1"><img src="./image/1.png"></li>
+                <li  alt="2"><img src="./image/2.png"></li>
+                <li  alt="3"><img src="./image/3.png"></li>
+                <li  alt="1"><img src="./image/1.png"></li>
+            </ul>
+        </div>
+        <div class="useless">
+            <div class="la"></div>
+            <div class="ra"></div>
+            <ul id="buttons">
+                <span index="1" class="on"></span>
+                <span index="2"></span>
+                <span index="3"></span>
+            </ul>
+        </div>
+        <div class="thirdpart"></div>
+        <div class="forthpart">
+            <div class="services">
+                <div class="firstservice"></div>
+                <div class="secondservice"></div>
+                <div class="thirdservice"></div>
+            </div>
+            <div class="bt1">
+                <div class="bt">Learn More</div>
+                <div class="bt">Learn More</div>
+                <div class="bt">Learn More</div>
+            </div>
+        </div>
+        <div class="fifthpart">
+            <div class="word3">Contact us if you have special request</div>
+            <div class="bt2">Contact us</div>
+        </div>
+        <div class="sixthpart">
+            <div class="sinterval">
+                <ul class="spictures" style="left:-582px">
+                    <li alt="3"><img src="./image/6.png"></li>
+                    <li alt="1"><img src="./image/4.png"></li>
+                    <li alt="2"><img src="./image/5.png"></li>
+                    <li alt="3"><img src="./image/6.png"></li>
+                    <li alt="1"><img src="./image/4.png"></li>
+                </ul>
+            </div>
+            <div id="sbuttons">
+                <span sindex=1 class="son"></span>
+                <span sindex=2></span>
+                <span sindex=2></span>
+            </div>
+        </div>
+        <div class="seventhpart">
+            <div class="inputs">
+                <form>
+                    <input placeholder= "Name" class="first">
+                    <input placeholder= "Mail" class="first">
+                    <input type="submit" value="Subscibe" class="second second1">
+                </form>
+            </div>
+            <div class="icons">
+                <img src="./image/Customers.png">
+                <img src="./image/Awards.png">
+                <img src="./image/Projects.png">
+                <img src="./image/Followers.png">
+            </div>
+        </div>
+        <div class="eighth"></div>
+        <div class="ninth">
+            <div class="message">
+                <input placeholder= "Name" class="third">
+                <input placeholder= "Mail" class="third">
+                <input placeholder= "Message" class="fourth">
+                <input type="submit" value="Send Message" class="second second2">
+            </div>
+        </div>
+        <div class="footer">
+            <div class="small">
+                <img src="./image/Facebook.png">
+                <img src="./image/Tweeter1.png">
+                <img src="./image/Dribble.png">
+                <img src="./image/Google.png">
+                <img src="./image/Flickr.png">
+                <img src="./image/DeviantArt.png">
+                <img src="./image/Skype.png">
+            </div>
+            <div class="up"></div>
+        </div>
+    </div>
+</body>ss
+</html>
+<script type="text/javascript">
+window.onload = function() {
+    var oInterval = document.getElementsByClassName('interval')[0];
+    var sInterval = document.getElementsByClassName('sinterval')[0];
+    var Buttons = document.getElementById('buttons').getElementsByTagName('span');
+    var sButtons = document.getElementById('sbuttons').getElementsByTagName('span');
+    var oPictures = document.getElementsByClassName('pictures')[0];
+    var spictures = document.getElementsByClassName('spictures')[0];
+    var oLa = document.getElementsByClassName('la')[0];
+    var oRa = document.getElementsByClassName('ra')[0];
+    var aLi = document.getElementsByTagName('li');
+    var index = 1;
+    var sindex = 1;
+    var animated = false;
+
+    function showButton() {
+        for (var i = 0; i < Buttons.length; i++) {
+            if (Buttons[i].className == 'on') {
+                Buttons[i].className = '';
+                break;
+            }
+        }
+        Buttons[index-1].className = 'on';
+    }
+
+    function animate(offset) {
+        animated = true;
+        var newLeft = parseInt(oPictures.style.left) + offset;
+        var time = 300;
+        var Interval = 10;
+        var speed = offset/(time/Interval);
+        var timer;
+
+        function go() {
+            if ( (speed > 0 && parseInt(oPictures.style.left) < newLeft) || (speed < 0 && parseInt(oPictures.style.left) > newLeft) ) {
+                oPictures.style.left = parseInt(oPictures.style.left) + speed + 'px';
+                setTimeout(go,Interval);
+            }
+            else {
+                animated = false;
+                oPictures.style.left = newLeft + 'px';
+
+                if (newLeft > -841) {
+                    oPictures.style.left = -2524 + 'px';
+                }
+                if (newLeft < -2524) {
+                    oPictures.style.left = -841 + 'px';
+                } 
+            }
+        }
+        go();
+    }
+
+    function play() {
+        timer = setInterval(function (){
+            oRa.onclick();
+        },3000);
+    }
+
+    function stop() {
+        clearInterval(timer);
+    }
+
+    oRa.onclick = function() {
+        if (index == 3) {
+            index =1;
+        }else {
+            index += 1;
+        }
+        showButton();
+        if (!animated) {
+            animate(-841);
+        }
+    }
+
+    oLa.onclick = function() {
+        if (index == 1) {
+            index =3;
+        }else {
+            index -= 1;
+        }
+        showButton();
+        if (!animated) {
+            animate(841);
+        }
+    }
+
+    for (var i = 0; i < Buttons.length;i++) {
+        if (this.className == 'on') {
+            return;
+        }
+        Buttons[i].onclick = function () {
+            var myIndex = parseInt(this.getAttribute('index'));
+            var offset = -841 * (myIndex - index);
+            animate(offset);
+            index = myIndex;
+            showButton();
+            if (!animated) {
+                animate(offset);
+            }
+        }
+    }
+
+    oInterval.onmouseover = stop;
+    oInterval.onmouseout = play;
+
+    play();
+
+}
+
+</script>

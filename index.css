@@ -1,0 +1,468 @@
+html，body,ul,li{
+    padding:0;
+    margin:0；
+}
+li{
+    list-style: none;
+}
+.clearfix:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:' ';
+    clear:both;
+    height:0;
+}
+.clearfix {
+    zoom:1; 
+}
+
+#body{
+    width:1600px;
+    height:3110px;
+/*    min-width:1600px;*/
+    margin:0 auto;
+    font-family:"Questrial";
+}
+.header{
+    position:absolute;
+    display:inline-block;
+    width:1600px;
+    height:84px;
+    background-image:url(./image/Header-Bg.png);
+}
+.ribbon{
+    float:left;
+    position:relative;
+    width:93px;
+    height:104px;
+    left:317px;
+    background-image:url(./image/Ribbon.png);
+}
+.logo{
+    position: relative;
+    width:34px;
+    height:32px;
+    top:30px;
+    left:30px;
+    background-image: url(./image/Logo.png);
+}
+.logo-word{
+    position:relative;
+    float:left;
+    margin:0 auto;
+    width:95px;
+    height:76px;
+    left:331px;
+    color:#5f6574;
+}
+.word1{
+    margin:34px auto 0;
+    width:71px;
+    height:12px;
+    text-align:center;
+    font-size:16px;
+    letter-spacing:2px;
+}
+.word2{
+    margin:3px auto 0;
+    width:68px;
+    height:8px;
+    font-size:9px; 
+    letter-spacing:9px;
+}
+.items {
+    position: absolute;
+    margin-top:34px;
+    color:#65717c; 
+    left:675px;
+    height:84px;
+}
+.items li{
+    display: inline;
+    margin-left: 35px;
+    cursor:pointer;
+}
+.items li:hover {
+    color:#1bcab8;
+}
+.item li:nth-child(1){
+    margin-left:0;
+}
+.search{
+    position:relative;
+    left:1190px;
+    background-image:url(./image/s-Bg.png);
+
+}/*有问题*/
+.s{ 
+    z-index: -1;
+    width:1600px;
+    height:78px;
+    background-color:transparent;
+}/*此处用以隔开header与secondpart*/
+.secondpart{
+    z-index: -1;
+    position: absolute;
+    width:1600px;
+    height:475px;
+    background-image:url(./image/Dark-Bg.png);
+}
+.interval{
+    position: relative;
+    overflow: hidden;
+    top:136px;
+    left:370px;
+    width:841px;
+    height:410px;
+    border-top: 8px solid #ffffff;
+    border-left: 9px solid #ffffff;
+    border-bottom: 8px solid #ffffff;
+    border-right: 9px solid #ffffff; 
+}
+.pictures{
+    z-index:1;
+    position:absolute;   
+    top:-16px;
+    width:4205px;
+    height:410px;    
+}
+.pictures li {
+    float:left;
+}
+.useless{
+    position: relative;
+    top:-282px;
+    left:379px;
+    width:841px;
+    height:485px;
+    background-color:transparent;
+}
+.la{
+    position:relative;
+    top:160px;
+    left:-57.5px;
+    width:97px;
+    height:97px;
+    border-radius:50%;
+    background-color:#ffffff;
+    background-repeat:no-repeat;
+    background-image:url(./image/Left-Arrow.png);
+    background-position:24px;
+    cursor:pointer;
+}
+.ra{    
+    position:relative;
+    top:63px;
+    left:801.5px;
+    width:97px;
+    height:97px;
+    border-radius:50%;
+    background-color:#ffffff;
+    background-repeat:no-repeat;
+    background-image:url(./image/Right-Arrow.png);
+    background-position:63px;
+    cursor:pointer;
+}
+#buttons{
+    margin:235px auto 0;
+    width:140px;
+    height:50px;
+}
+#buttons span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left:17px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow:0 0 0 5px rgba(208,210,213,.4);
+    cursor: pointer;    
+}
+#buttons .on{
+    background-color:#2ccebe;
+}
+.thirdpart{
+    z-index: -1;
+    position:absolute;
+    margin-top:-447px;
+    width:1600px;
+    height:363px;
+    background-image: url(./image/Light-Bg.png);
+}
+.forthpart{
+    z-index: -2;
+    position: relative;
+    top:-87px;
+    width:1600px;
+    height:470px;
+    background-image: url(./image/Background.png);
+}
+.services{
+    margin:0 auto;
+    padding-top:38px;
+    width:940px;
+    height:312px;
+}
+.firstservice{
+    width: 280px;
+    height: 312px;
+    background-image: url(./image/first-service.png);
+}
+.secondservice{
+    width: 280px;
+    height: 312px;
+    margin-left:50px;
+    background-image: url(./image/second-service.png);    
+}
+.thirdservice{
+    width: 280px;
+    height: 312px;
+    margin-left:50px;
+    background-image: url(./image/third-service.png);    
+}
+.firstservice,.secondservice,.thirdservice{
+    float:left;
+    background-repeat:no-repeat;
+}
+.bt1{
+    margin:0 auto;
+    padding-top:25px;
+    width:940px;
+    height:65px;
+}
+.bt{
+    float:left;
+    width:134px;
+    height:40px;
+    text-align:center;
+    line-height:40px;
+    color:#effbfa;
+    background-image:url(./image/Button.png);
+    background-repeat:no-repeat;
+}
+.bt:nth-child(1){
+    margin-left:73px; 
+}
+.bt:nth-child(2){
+    margin-left: 196px;
+}
+.bt:nth-child(3){
+    margin-left:196px; 
+}
+.fifthpart{
+    z-index: -3;
+    position: relative;    
+    margin-top:-91px;
+    width:1600px;
+    height:/*474*/180px;
+    background-image:url(./image/Bg2.png);
+}
+.word3{
+    margin:0 auto;
+    padding-top:30px;
+    width:400px;
+    height:27px;
+    font-size:20px;
+    text-align:center;
+    color:#abb0b6;
+}
+.bt2{
+    margin:38px auto 0;
+    width:150px;
+    height:41px;
+    font-size:15px;
+    line-height:41px;
+    text-align:center;
+    color:#2ccebe;
+    background-image:url(./image/button2.png);
+}
+.sixthpart{
+    z-index:-4;
+    position:relative;
+    margin-top:-5px;
+    width:1600px;
+    height:310px;
+    background-image:url(./image/Bg3.png);
+}
+.sinterval{
+    overflow:hidden;
+    position: relative;
+    margin:0 auto;
+    padding-top:90px;
+    width:582px;
+    height:117px;
+}
+.spictures{
+    position:absolute;
+    margin-top:6px;
+    width:2910px;
+    height:105px;
+}
+.spictures  li {
+    float:left;
+}
+#sbuttons{
+    margin:30px auto 0;
+    width:140px;
+    height:50px;
+}
+#sbuttons span{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-left:17px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;    
+}
+#sbuttons .son{
+    background-color:#2ccebe;
+}
+.seventhpart{
+    margin-top:-9px;
+    width:1600px;
+    height:555px;
+    background-image: url(./image/Bg4.png);
+}
+.inputs {
+    margin:0 auto;
+    position:relative;
+    top:265px;
+    width:620px;
+    height:60px;
+}
+.first {
+    position:relative;
+    width:218px;
+    height:41px;
+    border:0;
+    border-radius:5px;
+    font-size:15px;
+    text-indent:9px;
+    background-color:#f5f5f5;
+}
+.first:nth-child(2) {
+    margin-left:20px;
+}
+.second {
+    position: relative;
+    width:125px;
+    height:38px;
+    border:0;
+    border-radius:5px;
+    background-color: #0bc7b4;
+}
+.second1 {
+    margin-left:22px;
+}
+.second2 {
+    margin-top:20px;
+}
+.icons {
+    margin:315px auto 0;
+    width:960px;
+    height:68px;
+}
+.icons img:nth-child(2) {
+    margin-left:105px;
+}
+.icons img:nth-child(3) {
+    margin-left:128px;
+}
+.icons img:nth-child(4) {
+    margin-left:83px;
+}
+.eighth {
+    position:relative;
+    z-index:-1;
+    margin:-6px 0 0 ;
+    width:1600px;
+    height:148px;
+    background-image:url(./image/Bg6.png);
+}
+.ninth {
+    margin-top:-5px;
+    width:1600px;
+    height:499px;
+    background-image:url(./image/Bg7.png);
+}
+.message {
+    position:absolute;
+    margin:215px 0 0 325px;
+    width:480px;
+    height:270px;
+}
+.third {
+    position:relative;
+    width:220px;
+    height:42px;
+    border:0;
+    border-radius:5px;
+    font-size:15px;
+    text-indent:9px;
+    background-color:#162432;
+}
+.third:nth-child(2) {
+    margin-left:20px;
+}
+.fourth {
+    position:relative;
+    margin-top:20px;
+    width:460px;
+    height:138px;
+    border:0;
+    border-radius:5px;
+    font-size:15px;
+    text-indent:9px;
+    background-color:#162432;
+}
+.footer {
+    width:1600px;
+    height:102px;
+    background-image:url(./image/Bg8.png);
+}
+.small {
+    position:relative;
+    top:45px;
+    left:1020px;
+    display:inline;
+    width:250px;
+    height:20px;
+}
+.small img {
+    cursor:pointer;
+}
+.small img:nth-child(2) {
+    position:relative;
+    top:-1px;
+    margin-left:22px;
+}
+.small img:nth-child(3) {
+    margin-left:16px;
+}
+.small img:nth-child(4) {
+    position:relative;
+    top:-1px;
+    margin-left:17px;
+}
+.small img:nth-child(5) {
+    margin-left:17px;
+}
+.small img:nth-child(6) {
+    position:relative;
+    top:-5px;
+    margin-left:16px;
+}
+.small img:nth-child(7) {
+    margin-left:18px;
+}
+.up {
+    position:relative;
+    top:24px;
+    left:1346px;
+    width:60px;
+    height:59px;
+    background-image:url(./image/Bg9.png);
+}
+
